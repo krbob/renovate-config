@@ -1,0 +1,23 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended",
+    "helpers:pinGitHubActionDigests"
+  ],
+  "timezone": "Europe/Warsaw",
+  "dependencyDashboard": true,
+  "branchPrefix": "renovate/",
+  "prCreation": "immediate",
+  "automerge": true,
+  "automergeType": "pr",
+  "automergeStrategy": "squash",
+  "platformAutomerge": true,
+  "ignoreTests": false,
+  "rebaseWhen": "conflicted",
+  "commitHourlyLimit": 0,
+  "prConcurrentLimit": 5,
+  "branchConcurrentLimit": 5,
+  "prHourlyLimit": 0,
+  "separateMajorMinor": true,
+  "separateMultipleMajor": false
+}

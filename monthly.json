@@ -1,0 +1,22 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "./base"
+  ],
+  "schedule": [
+    "* * 1 * *"
+  ],
+  "updateNotScheduled": false,
+  "minimumReleaseAge": "7 days",
+  "minimumReleaseAgeBehaviour": "timestamp-optional",
+  "lockFileMaintenance": {
+    "enabled": true,
+    "schedule": [
+      "* * 1 * *"
+    ],
+    "automerge": true
+  },
+  "vulnerabilityAlerts": {
+    "enabled": false
+  }
+}
