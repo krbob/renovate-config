@@ -4,6 +4,8 @@ Reusable Renovate presets for repositories owned by `krbob`.
 
 ## Presets
 
+- `github>krbob/renovate-config:common` — shared non-policy defaults for repositories that
+  need their own cadence or automerge rules.
 - `github>krbob/renovate-config` or `github>krbob/renovate-config:monthly` — create and
   automerge all mature dependency updates on the first day of each month. At most five pull
   requests are open at once and GitHub merges each one as soon as required CI passes.
@@ -22,5 +24,5 @@ ignore `schedule`. Vulnerable dependencies are still included in the normal mont
 
 ```bash
 npx --yes renovate renovate-config-validator --no-global \
-  default.json base.json monthly.json monthly-private.json continuous.json
+  default.json common.json base.json monthly.json monthly-private.json continuous.json
 ```
