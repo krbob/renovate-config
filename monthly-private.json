@@ -6,6 +6,6 @@
   "platformAutomerge": false,
   "rebaseWhen": "behind-base-branch",
   "automergeSchedule": [
-    "* * 1 * *"
+    "at any time"
   ]
 }
