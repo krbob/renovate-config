@@ -21,11 +21,12 @@ Repository-specific managers, grouping, version constraints, and exceptional rel
 in each repository's own Renovate configuration.
 
 The monthly preset disables Renovate's special `vulnerabilityAlerts` pull requests because those
-ignore `schedule`. Vulnerable dependencies are still included in the normal monthly update run.
+ignore `schedule`. Dependencies remain eligible for normal scheduled version updates and lock-file
+maintenance, but this does not guarantee remediation of a specific vulnerability alert.
 
 ## Validation
 
 ```bash
-npx --yes renovate renovate-config-validator --no-global \
+npx --yes --package renovate@44.61.2 renovate-config-validator --strict --no-global \
   default.json common.json base.json monthly.json monthly-private.json continuous.json
 ```
