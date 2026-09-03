@@ -9,7 +9,8 @@ Reusable Renovate presets for repositories owned by `krbob`.
 - `github>krbob/renovate-config` or `github>krbob/renovate-config:monthly` — create and
   automerge all mature dependency updates on the first day of each month. Creation is not
   concurrency-limited, GitHub merges each pull request as soon as required CI passes, and
-  Renovate may refresh an existing branch after day 1 when a real conflict must be resolved.
+  Renovate may refresh an existing branch after day 1, including for a newer eligible release
+  or when a real conflict must be resolved; it does not create a new branch outside day 1.
 - `github>krbob/renovate-config:monthly-private` — the same monthly creation policy for private
   repositories where GitHub platform automerge and required-status rules are unavailable;
   Renovate's own automerge may continue draining the queue after day 1.
